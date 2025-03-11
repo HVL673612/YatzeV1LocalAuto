@@ -2,27 +2,27 @@ package Project.Yatze;
 
 public class CalcScore {
     public static int scoreCategory(int[] dice, int category) {
-        switch (category) {
-            case 0: return sumOfValue(dice, 1); // Ones
-            case 1: return sumOfValue(dice, 2); // Twos
-            case 2: return sumOfValue(dice, 3); // Threes
-            case 3: return sumOfValue(dice, 4); // Fours
-            case 4: return sumOfValue(dice, 5); // Fives
-            case 5: return sumOfValue(dice, 6); // Sixes
-            case 6: return scoreOnePair(dice);
-            case 7: return scoreTwoPairs(dice);
-            case 8: return scoreThreeOfAKind(dice);
-            case 9: return scoreFourOfAKind(dice);
-            case 10: return scoreSmallStraight(dice);
-            case 11: return scoreLargeStraight(dice);
-            case 12: return scoreFullHouse(dice);
-            case 13: return sumAllDice(dice); // Chance
-            case 14: return scoreYatzy(dice);
-            default: return 0;
-        }
+        return switch (category) {
+            case 0 -> sumOfValue(dice, 1); // Ones
+            case 1 -> sumOfValue(dice, 2); // Twos
+            case 2 -> sumOfValue(dice, 3); // Threes
+            case 3 -> sumOfValue(dice, 4); // Fours
+            case 4 -> sumOfValue(dice, 5); // Fives
+            case 5 -> sumOfValue(dice, 6); // Sixes
+            case 6 -> scoreOnePair(dice);
+            case 7 -> scoreTwoPairs(dice);
+            case 8 -> scoreThreeOfAKind(dice);
+            case 9 -> scoreFourOfAKind(dice);
+            case 10 -> scoreSmallStraight(dice);
+            case 11 -> scoreLargeStraight(dice);
+            case 12 -> scoreFullHouse(dice);
+            case 13 -> sumAllDice(dice); // Chance
+            case 14 -> scoreYatzy(dice);
+            default -> 0;
+        };
     }
 
-    public static int scoreYatzy(int[] dice) {
+    public static int scoreYatzy() {
         // 50 points for Yatzy
         return 50;
     }

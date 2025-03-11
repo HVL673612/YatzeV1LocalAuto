@@ -17,7 +17,7 @@ public class Spiller {
 
         if (yatzeRules.isYatzy(dice)) {
             System.out.println("Yatzy! Skipping category " + currentCategory);
-            totalScore += CalcScore.scoreYatzy(dice);
+            totalScore += CalcScore.scoreYatzy();
         } else {
             int points = CalcScore.scoreCategory(dice, currentCategory);
             totalScore += points;
