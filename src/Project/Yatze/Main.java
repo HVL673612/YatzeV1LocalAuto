@@ -1,10 +1,8 @@
 package Project.Yatze;
 
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
-        Spiller spiller = new Spiller();
+        AutoSpiller spiller = new AutoSpiller();
 
         while (true) {
             // If all categories have been used, break out

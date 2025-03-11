@@ -17,7 +17,7 @@ public class CalcScore {
             case 11 -> scoreLargeStraight(dice);
             case 12 -> scoreFullHouse(dice);
             case 13 -> sumAllDice(dice); // Chance
-            case 14 -> scoreYatzy(dice);
+            case 14 -> scoreYatzy();
             default -> 0;
         };
     }
